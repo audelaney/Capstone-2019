@@ -64,6 +64,9 @@ namespace Presentation
     /// </summary>
     public partial class DevLauncher : Window
     {
+
+
+
         #region Variables Code #Variables
         //This is the employee who is logged in to our system
         private Employee _employee;
@@ -1249,6 +1252,7 @@ namespace Presentation
         /// 
         /// This is where you stick all the code you want to run in your Constructor/Window_Loaded statement
         /// </summary>
+        /// 
         private void BrowseShopsDoOnStart()
         {
             _shopManager = new ShopManagerMSSQL();
@@ -1272,7 +1276,7 @@ namespace Presentation
         {
             try
             {
-                _allShops = (List<VMBrowseShop>)_shopManager.RetrieveAllVMShops();
+                //_allShops = (List<VMBrowseShop>)_shopManager.RetrieveAllVMShops();
                 _currentShops = _allShops;
                 populateDataGrid();
             }
